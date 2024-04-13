@@ -6,9 +6,9 @@ FOLDER_NAMES := order shipping payment
 .PHONY: setup
 setup:
 	git fetch --all && git checkout main && git pull origin main
-	#sudo apt-get install -y protobuf-compiler golang-goprotobuf-dev
-	#go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
-	#go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+	sudo apt-get install -y protobuf-compiler golang-goprotobuf-dev
+	go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+	go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
 .PHONY: generate
 generate:
