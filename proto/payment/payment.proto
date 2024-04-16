@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/huseyinbabal/microservices-proto/payment";
+option go_package = "github.com/bruceneco/go-ms-grpc/proto/paymentgrpc";
 
 message CreatePaymentRequest {
   int64 user_id = 1;
