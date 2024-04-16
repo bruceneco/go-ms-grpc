@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/bruceneco/go-ms-grpc/proto/ordergrpc";
+option go_package = "/ordergrpc";
 
 message CreateOrderRequest {
   int64 user_id = 1;
