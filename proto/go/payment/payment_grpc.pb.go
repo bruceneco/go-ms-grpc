@@ -4,7 +4,7 @@
 // - protoc             v3.12.4
 // source: payment/payment.proto
 
-package payment
+package paymentgrpc
 
 import (
 	context "context"
