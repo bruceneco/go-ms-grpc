@@ -4,7 +4,7 @@
 // - protoc             v3.12.4
 // source: shipping/shipping.proto
 
-package shipping
+package shippinggrpc
 
 import (
 	context "context"
