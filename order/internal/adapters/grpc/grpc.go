@@ -7,7 +7,6 @@ import (
 	"github.com/bruceneco/go-ms-grpc/order/internal/application/core/domain"
 	"github.com/bruceneco/go-ms-grpc/order/internal/ports"
 	ordergrpc "github.com/bruceneco/go-ms-grpc/proto/go/order"
-	"go.uber.org/fx"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 	"log"
@@ -22,7 +21,7 @@ type Adapter struct {
 	ordergrpc.UnimplementedOrderServer
 }
 
-func NewAdapter(api ports.APIPort, cfg *config.Config, lc fx.Lifecycle) *Adapter {
+func NewAdapter(api ports.APIPort, cfg *config.Config) *Adapter {
 	port, err := strconv.Atoi(cfg.GetString(config.EnvAppPort))
 	if err != nil {
 		panic(fmt.Errorf("port must be an integer: %v\n", err))
@@ -49,7 +48,7 @@ func (a *Adapter) Run() {
 	}
 }
 
-func (a *Adapter) Create(ctx context.Context, request *ordergrpc.CreateOrderRequest) (*ordergrpc.CreateOrderResponse, error) {
+func (a *Adapter) Create(_ context.Context, request *ordergrpc.CreateOrderRequest) (*ordergrpc.CreateOrderResponse, error) {
 	var orderItems []domain.OrderItem
 	for _, orderItem := range request.Items {
 		orderItems = append(orderItems, domain.OrderItem{
