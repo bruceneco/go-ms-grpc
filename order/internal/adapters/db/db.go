@@ -2,7 +2,9 @@ package db
 
 import (
 	"fmt"
+	"github.com/bruceneco/go-ms-grpc/order/config"
 	"github.com/bruceneco/go-ms-grpc/order/internal/application/core/domain"
+	"github.com/bruceneco/go-ms-grpc/order/internal/ports"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -26,7 +28,8 @@ type Adapter struct {
 	db *gorm.DB
 }
 
-func NewAdapter(dataSourceUrl string) (*Adapter, error) {
+func NewAdapter(cfg *config.Config) (ports.DBPort, error) {
+	dataSourceUrl := cfg.GetString(config.EnvDBUrl)
 	db, openErr := gorm.Open(mysql.Open(dataSourceUrl))
 	if openErr != nil {
 		return nil, fmt.Errorf("failed to connect to database: %w", openErr)
@@ -58,7 +61,7 @@ func (a *Adapter) Get(id string) (domain.Order, error) {
 	}
 	return order, res.Error
 }
-func (a *Adapter) Create(order *domain.Order) error {
+func (a *Adapter) Save(order *domain.Order) error {
 	var orderItems []OrderItem
 	for _, orderItem := range order.OrderItems {
 		orderItems = append(orderItems, OrderItem{
