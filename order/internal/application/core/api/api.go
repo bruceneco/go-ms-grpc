@@ -9,7 +9,7 @@ type Application struct {
 	db ports.DBPort
 }
 
-func NewApplication(db ports.DBPort) *Application {
+func NewApplication(db ports.DBPort) ports.APIPort {
 	return &Application{
 		db,
 	}
