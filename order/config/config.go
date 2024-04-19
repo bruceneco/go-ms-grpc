@@ -6,9 +6,10 @@ import (
 )
 
 const (
-	EnvMode    = "env"
-	EnvAppPort = "app_port"
-	EnvDBUrl   = "db_url"
+	EnvMode              = "env"
+	EnvAppPort           = "app_port"
+	EnvDBUrl             = "db_url"
+	EnvPaymentServiceURL = "payment_service.url"
 )
 
 type Config struct {
