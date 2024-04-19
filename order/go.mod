@@ -11,6 +11,7 @@ require (
 
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
+	github.com/bruceneco/go-ms-grpc/proto/go/payment v0.0.2 // indirect
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
 	github.com/go-sql-driver/mysql v1.8.1 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect

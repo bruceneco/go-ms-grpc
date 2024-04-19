@@ -4,6 +4,8 @@ github.com/bruceneco/go-ms-grpc/proto/go/order v0.0.2 h1:7DyzCZzNBXX94JVYCN8FUYC
 github.com/bruceneco/go-ms-grpc/proto/go/order v0.0.2/go.mod h1:85vIBXF70JEcFM1nmMtap/RDwZhTlmG+DBhsLibtw4A=
 github.com/bruceneco/go-ms-grpc/proto/go/order v0.0.9 h1:VEmeZ+O4TdS+5XZ+dPCrvsS4rjq79rRi2EtPs2tEN3g=
 github.com/bruceneco/go-ms-grpc/proto/go/order v0.0.9/go.mod h1:85vIBXF70JEcFM1nmMtap/RDwZhTlmG+DBhsLibtw4A=
+github.com/bruceneco/go-ms-grpc/proto/go/payment v0.0.2 h1:fPgJbteZmESKuHxVE6tmZjZPiFHz6K9mV8QQl2/wIYQ=
+github.com/bruceneco/go-ms-grpc/proto/go/payment v0.0.2/go.mod h1:WvhjQusbssjOtI8P1Nj+KaXpt5L4lU7JAXMe1RsqRcs=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/fsnotify/fsnotify v1.7.0 h1:8JEhPFa5W2WU7YfeZzPNqzMP6Lwt7L2715Ggo0nosvA=
